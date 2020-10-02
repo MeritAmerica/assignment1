@@ -3,6 +3,8 @@ package com.meritamerica.assignment1;
 public class CheckingAccount {
 	
 	double checkingBalance;
+	//set as final because the rate is never to be changed
+	private static final double rate = .0001;
 	
 	public CheckingAccount(double openingBalance){
 		checkingBalance = openingBalance;
@@ -10,16 +12,15 @@ public class CheckingAccount {
 	
 	double getBalance() 
 	{
-		double balance = checkingBalance;
-		return balance;
+		return checkingBalance;
 	}
 	
 	double getInterestRate() 
 	{
-		double rate = 2;
 		return rate;
 	}
 	
+	//checks if either taking more money then there is or inputting a negative value or 0
 	boolean withdraw(double amount)
 	{
 		if (amount > checkingBalance || amount <= 0)
@@ -33,6 +34,7 @@ public class CheckingAccount {
 		}
 	}
 	
+	//checks if giving a negative value or 0
 	boolean deposit(double amount)
 	{
 		if (amount <= 0)
@@ -48,7 +50,7 @@ public class CheckingAccount {
 	
 	double  futureValue(int years)
 	{
-		double FV = checkingBalance * Math.pow(1.01, years);
+		double FV = checkingBalance * Math.pow((1+rate), years);
 		return FV;
 	}
 	
