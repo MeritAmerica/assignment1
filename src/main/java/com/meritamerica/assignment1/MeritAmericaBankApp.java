@@ -8,12 +8,12 @@ public class MeritAmericaBankApp {
 		AccountHolder account = new AccountHolder("Bradley", "T", "Thornton", "123-45-6789", 100, 1000);
 		System.out.print(account.toString());
 		account.chk.deposit(500);
-		//account.sav.withdraw(800);
-		System.out.print(account.chk.toString());
-		//System.out.print(account.sav.toString());
-		AccountHolder account2 = new AccountHolder("Megan", "?", "Emacio", "123-45-6789", 200, 500);
+		account.sav.withdraw(800);
+		System.out.println(account.chk.toString());
+		System.out.println(account.sav.toString());
+		AccountHolder account2 = new AccountHolder("Ernest", "Gary", "Gygax", "123-45-6789", 200, 500);
 		account2.chk.deposit(-500);
-		//account2.sav.withdraw(600);
+		account2.sav.withdraw(600);
 		System.out.print(account2.toString());
 		
 	}

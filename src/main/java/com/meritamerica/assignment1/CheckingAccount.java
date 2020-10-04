@@ -25,10 +25,12 @@ public class CheckingAccount {
 	{
 		if (amount > checkingBalance || amount <= 0)
 		{
+			System.out.println("Invalid amount");
 			return false;
 		}
 		else
 		{
+			System.out.println("Approved amount!");
 			checkingBalance -= amount;
 			return true;
 		}
@@ -39,10 +41,12 @@ public class CheckingAccount {
 	{
 		if (amount <= 0)
 		{
+			System.out.println("Invalid amount");
 			return false;
 		}
 		else
 		{
+			System.out.println("Approved amount!");
 			checkingBalance += amount;
 			return true;
 		}
@@ -56,9 +60,9 @@ public class CheckingAccount {
 	
 	public String toString()
 	{
-		String output = ("Savings Account Balance: " + getBalance()
-						+"\nSavings Account Interest Rate: " + getInterestRate() 
-						+"\nSavings Account Balance in 3 Years: " + futureValue(3));
+		String output = ("Checking Account Balance: " + getBalance()
+						+"\nChecking Account Interest Rate: " + getInterestRate() 
+						+"\nChecking Account Balance in 3 Years: " + futureValue(3));
 		return output;
 		
 	}

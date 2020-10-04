@@ -25,9 +25,8 @@ public class AccountHolder {
 		this.ssn = ssn;
 		this.checkingAccountOpeningBalance = checkingAccountOpeningBalance;
 		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance;
-		chk.checkingBalance = this.checkingAccountOpeningBalance;
-		//this is where the savings account balance would be move to SavingsAccount
-		//sav.savingBalance = this.savingsAccountOpeningBalance;
+		chk = new CheckingAccount(checkingAccountOpeningBalance);
+		sav = new SavingsAccount(savingsAccountOpeningBalance);
 
 	} 
 	// finds our firstName value and returns it, so on for middle and last name
@@ -75,7 +74,7 @@ public class AccountHolder {
 		return chk;
 	}
 	
-	SavingsAccount getSavingsAccount()
+	SavingsAccount getSavingsAccount()	
 	{
 		return sav;
 	}
@@ -85,9 +84,8 @@ public class AccountHolder {
 	{
 		String output = ("Name: " + getFirstName() + " " + getMiddleName() + " " + getLastName()
 					    +"\nSSN: " + getSSN()
-					    + "\n" + getCheckingAccount().toString());
-						// this is where the Savings account ".toString" will go
-					    //+ "\n" + getSavingsAccount().toString());
+					    + "\n" + chk.toString()
+					    + "\n" + sav.toString());
 		return output;
 	}
 	
