@@ -1,5 +1,6 @@
 package com.meritamerica.assignment1;
 
-public class CheckingAccount {
-	
+public class CheckingAccount extends AccountHolder 
+{
+
 }
