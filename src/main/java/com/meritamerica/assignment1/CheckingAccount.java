@@ -40,9 +40,10 @@ public class CheckingAccount extends AccountHolder
 	 	 
 	boolean withdraw(double amount) 
 	{	
-		if(this.currentBalance > amount) 
+		if(this.currentBalance >= amount) 
 		{
 			currentBalance -= amount;
+			return true;
 		}
 		return false;
 	}
@@ -52,6 +53,7 @@ public class CheckingAccount extends AccountHolder
 		if(amount > 0) 
 		{
 			this.currentBalance += amount;
+			return true;
 		}
 		return false;
 	}

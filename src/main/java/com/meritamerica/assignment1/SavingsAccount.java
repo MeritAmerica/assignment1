@@ -28,9 +28,10 @@ public class SavingsAccount extends AccountHolder
 	 
 	boolean withdraw(double amount) 
 	{	
-		if(currentBalance > amount) 
+		if(currentBalance >= amount) 
 		{
 			currentBalance -= amount;
+			return true;
 		}
 		return false;
 	}
@@ -40,6 +41,7 @@ public class SavingsAccount extends AccountHolder
 		if(amount > 0) 
 		{
 			currentBalance += amount;
+			return true;
 		}
 		return false;
 	}

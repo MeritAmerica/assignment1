@@ -8,7 +8,7 @@ public class MeritAmericaBankApp
 	/*METHODS*/	
 	public static void main(String[] args)
 	{
-		/*
+		
 		AccountHolder accountHolder = new AccountHolder("The", "Super", "Dave", "111-11-1111", 100, 1000);			// instantiate account holder with 100 in checking, 1000 in savings
 		accountHolder.toString();																					// display info
 		accountHolder.getCheckingAccount().deposit(500);															// deposit 500 into checking
@@ -19,7 +19,8 @@ public class MeritAmericaBankApp
 		accountHolderTwo.getCheckingAccount().deposit(-500);														// deposit -500 into checking
 		accountHolderTwo.getSavingsAccount().withdraw(600);															// withdraw 600 from savings
 		accountHolderTwo.toString();																				// display info of 2nd acct holder
-		*/
+		
+		/* TESTS
 		AccountHolder accountHolder = new AccountHolder("The", "Super", "Dave", "111-11-1111", 100, 1000);			// instantiate account holder with 100 in checking, 1000 in savings
 		System.out.println(accountHolder.toString());																// display info
 		System.out.println(accountHolder.getCheckingAccount().deposit(500));										// deposit 500 into checking
@@ -30,5 +31,6 @@ public class MeritAmericaBankApp
 		System.out.println(accountHolderTwo.getCheckingAccount().deposit(-500));									// deposit -500 into checking
 		System.out.println(accountHolderTwo.getSavingsAccount().withdraw(600));										// withdraw 600 from savings
 		System.out.println(accountHolderTwo.toString());
+		*/
 	}		
 }
