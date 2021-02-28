@@ -4,62 +4,55 @@ public class SavingsAccount extends AccountHolder
 {
 	/*INSTANCE VARIABLES*/
 	private double openingBalance;
-	private int years;
-
-	
-	
+	private double currentBalance;
 	private double interestRate =.01;
 	
+	SavingsAccount() {}
 	
-
+	SavingsAccount(double openingBalance)
+	{
+		this.openingBalance = openingBalance;
+		this.currentBalance = openingBalance;
+	}
 	
+	/*GETTERS*/
+	double getBalance() 
+	{		 
+		return openingBalance;
+	}
+	 	 
+	double getInterestRate() 
+	{		 
+		return interestRate;
+	}
+	 
+	boolean withdraw(double amount) 
+	{	
+		if(currentBalance > amount) 
+		{
+			currentBalance -= amount;
+		}
+		return false;
+	}
+					 
+	boolean deposit(double amount)
+	{	
+		if(amount > 0) 
+		{
+			currentBalance += amount;
+		}
+		return false;
+	}
+	  
+	double futureValue(int years) 
+	{	 
+		return currentBalance * Math.pow((1 + interestRate), years);
+	}
 	
-	/* Getters*/
-	 private double getBalance() {
-		 
-		 
-		 return openingBalance;
-	 }
-	 
-	 
-	 private double getInterestRate() {
-		 
-		 return interestRate;
-	 }
-	 
-	 
-	 boolean withdraw(double amount) {
-		 
-		 
-		 return 
-		 
-		 
-		 
-	 }
- boolean deposit(double amount) {
-		 
-		 
-		 return 
-		 
-		 
-		 
-	 }
-	 
- 
- double futureValue(int years) {
-	 
-	 
-	 return 
-	 
-	 
-	 
- }
-	
- public String toString()
+	public String toString()
 	{
 		return "\nSavings Account Balance: " + getBalance() +
-				"\nSavings Account Interest Rate: " + getInterestRate() +
-				"\nSavings Account Balance in 3 Years" + futureValue(years);  
-			
+				"\nSavings Account Interest Rate: " + String.format("%.2f", getInterestRate()) +
+				"\nSavings Account Balance in 3 Years: " + String.format("%.2f", futureValue(3));  			
 	}
 }

@@ -10,13 +10,12 @@ package com.meritamerica.assignment1;
 
 public class AccountHolder 
 {
+	
 	/*INSTANCE VARIABLES*/
 	private String firstName;
 	private String middleName;
 	private String lastName;
 	private String ssn;
-	private double checkingAccountOpeningBalance;
-	private double savingsAccountOpeningBalance;
 	private CheckingAccount checkingAccount;
 	private SavingsAccount savingsAccount;
 		
@@ -36,8 +35,8 @@ public class AccountHolder
 		this.middleName = middleName;
 		this.lastName = lastName;
 		this.ssn = ssn;
-		this.checkingAccountOpeningBalance = checkingAccountOpeningBalance;
-		this.savingsAccountOpeningBalance = savingsAccountOpeningBalance;
+		checkingAccount = new CheckingAccount(checkingAccountOpeningBalance);
+		savingsAccount = new SavingsAccount(savingsAccountOpeningBalance);
 	}
 	
 	public String toString()
@@ -71,13 +70,13 @@ public class AccountHolder
 	
 	CheckingAccount getCheckingAccount()
 	{
-		return checkingAccount;
+		return this.checkingAccount;
 	}
 	
 	SavingsAccount getSavingsAccount()
 	{
-		return savingsAccount;
-	}		
+		return this.savingsAccount;
+	}	
 	
 	/*SETTERS*/
 	void setFirstName(String firstName)
