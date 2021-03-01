@@ -18,7 +18,8 @@ public class MeritAmericaBankApp
 		AccountHolder accountHolderTwo = new AccountHolder("Catalina", "Wine", "Mixer", "222-22-2222", 200, 500);	// instantiate second account holder, 200 in checking and 500 in savings
 		accountHolderTwo.getCheckingAccount().deposit(-500);														// deposit -500 into checking
 		accountHolderTwo.getSavingsAccount().withdraw(600);															// withdraw 600 from savings
-		accountHolderTwo.toString();																				// display info of 2nd acct holder
+		accountHolderTwo.toString();
+																						
 		
 		/* TESTS
 		AccountHolder accountHolder = new AccountHolder("The", "Super", "Dave", "111-11-1111", 100, 1000);			// instantiate account holder with 100 in checking, 1000 in savings

@@ -48,7 +48,7 @@ public class SavingsAccount extends AccountHolder
 	  
 	double futureValue(int years) 
 	{	 
-		return currentBalance * Math.pow((1 + interestRate), years);
+		return currentBalance * Math.pow((1 + interestRate), (double)years);
 	}
 	
 	public String toString()

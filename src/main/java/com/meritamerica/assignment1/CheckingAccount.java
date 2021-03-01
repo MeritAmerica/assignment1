@@ -23,11 +23,6 @@ public class CheckingAccount extends AccountHolder
 	}
 	
 	/*GETTERS*/
-	double getOpeningBalance()
-	{
-		return this.openingBalance;
-	}	
-	
 	double getBalance() 
 	{
 		return currentBalance;
