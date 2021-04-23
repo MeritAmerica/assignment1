@@ -50,4 +50,8 @@ public class AccountHolder {
 	public SavingsAccount getSavingsAccount;{
 		
 	}
+	
+	public String toString() {
+		
+	}
 }
