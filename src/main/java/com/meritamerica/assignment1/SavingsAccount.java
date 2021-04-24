@@ -36,7 +36,7 @@ public class SavingsAccount {
 	
 	public double futureValue(int years) {
 		fv = 100*(Math.pow((1+INTEREST_RATE), years));
-		fv = Math.round(fv);
+		fv = Math.round(fv * 100.0) /100.0;
 		return fv;
 	}
 	
