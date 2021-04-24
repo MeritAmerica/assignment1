@@ -1,8 +1,11 @@
 package com.meritamerica.assignment1;
 
+import java.math.*;
+import java.lang.*;
+
 public class CheckingAccount {
 	
-	private static final double INTEREST_RATE = (double)0.0001;
+	private static final double INTEREST_RATE = 0.0001;
 	
 	public CheckingAccount(double openingBalance) {
 		currentBalance = openingBalance;
@@ -14,6 +17,12 @@ public class CheckingAccount {
 	
 	public double getInterestRate() {
 		return INTEREST_RATE;
+	}
+	
+	public BigDecimal withBigDecimal() {
+	    bigDecimal = new BigDecimal(INTEREST_RATE);
+	    bigDecimal = bigDecimal.setScale(4, RoundingMode.HALF_UP);
+	    return bigDecimal;
 	}
 	
 	public boolean withdraw(double amount) {
@@ -44,12 +53,13 @@ public class CheckingAccount {
 	
 	public String toString() {
 		return "1. Checking Account Balance: $" + currentBalance + "\r\n"
-				+ "2. Checking Account Interest Rate: " + INTEREST_RATE + "\r\n"
+				+ "2. Checking Account Interest Rate: " + bigDecimal + "\r\n"
 				+ "3. Checking Account Balance in 3 years: $" + fv;
 	}
 	
 
 	private double currentBalance;
 	public static double fv;
+	BigDecimal bigDecimal;
 	
 }
