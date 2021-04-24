@@ -40,7 +40,9 @@ public class CheckingAccount {
 	}
 	
 	public String toString() {
-		
+		return "1. Checking Account Balance: $" + currentBalance + "\r\n"
+				+ "2.  Checking Account Interest Rate: " + INTEREST_RATE + "\r\n"
+				+ "3. Checking Account Balance in 3 years: $" + fv;
 	}
 	
 	private double currentBalance;

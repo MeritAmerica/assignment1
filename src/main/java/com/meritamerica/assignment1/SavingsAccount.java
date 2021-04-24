@@ -40,7 +40,9 @@ public class SavingsAccount {
 	}
 	
 	public String toString() {
-		
+		return "1.  Savings Account Balance: $" + currentBalance + "\r\n"
+				+ "2. Savings Account Interest Rate: " + INTEREST_RATE + "\r\n"
+				+ "3.  Savings Account Balance in 3 years: $" + fv;
 	}
 	
 	private double currentBalance;

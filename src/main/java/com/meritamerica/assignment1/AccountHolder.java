@@ -61,12 +61,12 @@ public class AccountHolder {
 	public String toString() {
 			return "1.  Name: " + firstName + middleName + lastName + "\r\n" 
 			+ "2.  SSN: " + ssn + "\r\n" 
-			+ "3.  Checking Account Balance: $ " + account.getBalance() + "\r\n"
+			+ "3.  Checking Account Balance: $" + account.getBalance() + "\r\n"
 			+ "4.  Checking Account Interest Rate: " + account.getInterestRate() + "\r\n"
-			+ "5.  Checking Account Balance in 3 years: $ " + account.fv + "\r\n"
-			+ "6.  Savings Account Balance: $ " + savAccount.getBalance() + "\r\n"
+			+ "5.  Checking Account Balance in 3 years: $" + account.fv + "\r\n"
+			+ "6.  Savings Account Balance: $" + savAccount.getBalance() + "\r\n"
 			+ "7.  Savings Account Interest Rate: " + savAccount.getInterestRate() + "\r\n"
-			+ "8.  Savings Account Balance in 3 years: $ " + savAccount.fv + "\r\n";
+			+ "8.  Savings Account Balance in 3 years: $" + savAccount.fv + "\r\n";
 	}
 	
 	
