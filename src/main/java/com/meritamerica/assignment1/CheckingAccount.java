@@ -4,7 +4,7 @@ public class CheckingAccount {
 	
 	private static final double INTEREST_RATE = 0.0001;
 	
-	private void CheckingAccount(double openingBalance) {
+	public CheckingAccount(double openingBalance) {
 		currentBalance = openingBalance;
 	}
 	

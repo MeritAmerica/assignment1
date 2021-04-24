@@ -4,7 +4,7 @@ public class SavingsAccount {
 	
 	private static final double INTEREST_RATE = 0.01;
 	
-	public void SavingsAccount(double openingBalance) {
+	public SavingsAccount(double openingBalance) {
 		currentBalance = openingBalance;
 	}
 	
@@ -46,6 +46,6 @@ public class SavingsAccount {
 	}
 	
 	private double currentBalance;
-	private double fv;
+	public double fv;
 	
 }
