@@ -17,10 +17,11 @@ public class SavingsAccount {
 	}
 	
 	public boolean withdraw(double amount) {
-		if (currentBalance >= 0) {
+		if (currentBalance >= amount) {
 			currentBalance -= amount;
 			return true;
 		} else {
+			System.out.println("Transaction Failed");
 			return false;
 		}
 	}
@@ -30,20 +31,21 @@ public class SavingsAccount {
 			currentBalance += amount;
 			return true;
 		} else {
+			System.out.println("Transaction Failed");
 			return false;
 		}
 	}
 	
 	public double futureValue(int years) {
-		fv = 100*(Math.pow((1+INTEREST_RATE), years));
-		fv = Math.round(fv * 100.0) /100.0;
+		fv = (currentBalance *(Math.pow((1+INTEREST_RATE), years)));
+		fv = Math.round(fv * 100.0) / 100.0;
 		return fv;
 	}
 	
 	public String toString() {
-		return "1.  Savings Account Balance: $" + currentBalance + "\r\n"
+		return "1. Savings Account Balance: $" + currentBalance + "\r\n"
 				+ "2. Savings Account Interest Rate: " + INTEREST_RATE + "\r\n"
-				+ "3.  Savings Account Balance in 3 years: $" + fv;
+				+ "3. Savings Account Balance in 3 years: $" + fv;
 	}
 	
 	private double currentBalance;
