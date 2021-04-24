@@ -35,7 +35,8 @@ public class CheckingAccount {
 	}
 	
 	public double futureValue(int years) {
-		fv = 100*(Math.pow((1+INTEREST_RATE), years));
+		fv = (100*(Math.pow((1+INTEREST_RATE), years)));
+		fv = Math.round(fv);
 		return fv;
 	}
 	
@@ -45,7 +46,8 @@ public class CheckingAccount {
 				+ "3. Checking Account Balance in 3 years: $" + fv;
 	}
 	
+
 	private double currentBalance;
-	public double fv;
+	public static double fv;
 	
 }

@@ -63,10 +63,10 @@ public class AccountHolder {
 			+ "2.  SSN: " + ssn + "\r\n" 
 			+ "3.  Checking Account Balance: $" + checkingAccount.getBalance() + "\r\n"
 			+ "4.  Checking Account Interest Rate: " + checkingAccount.getInterestRate() + "\r\n"
-			+ "5.  Checking Account Balance in 3 years: $" + checkingAccount.fv + "\r\n"
+			+ "5.  Checking Account Balance in 3 years: $" + checkingAccount.futureValue(3) + "\r\n"
 			+ "6.  Savings Account Balance: $" + savingsAccount.getBalance() + "\r\n"
 			+ "7.  Savings Account Interest Rate: " + savingsAccount.getInterestRate() + "\r\n"
-			+ "8.  Savings Account Balance in 3 years: $" + savingsAccount.fv + "\r\n";
+			+ "8.  Savings Account Balance in 3 years: $" + savingsAccount.futureValue(3) + "\r\n";
 	}
 	
 	
