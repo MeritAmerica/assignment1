@@ -2,10 +2,10 @@ package com.meritamerica.assignment1;
 
 public class AccountHolder {
 	
-	private void AccountHolder() {
+	public AccountHolder() {
 		
 	}
-	private void AccountHolder(String firstName, String middleName, String lastName, String ssn,
+	public AccountHolder(String firstName, String middleName, String lastName, String ssn,
 			double checkingAccountOpeningBalance, double savingsAccountOpeningBalance) {		
 		this.firstName = firstName;
 		this.middleName = middleName;
