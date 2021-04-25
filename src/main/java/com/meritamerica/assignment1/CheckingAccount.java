@@ -47,10 +47,11 @@ public class CheckingAccount {
 	
 	public double futureValue(int years) {
 		fv = (currentBalance *(Math.pow((1+INTEREST_RATE), years)));
-		fv = Math.round(fv * 100.0) /100.0;
+		/* fv = Math.round(fv * 100.0) /100.0; */
 		return fv;
 	}
 	
+	@Override
 	public String toString() {
 		return "1. Checking Account Balance: $" + currentBalance + "\r\n"
 				+ "2. Checking Account Interest Rate: " + bigDecimal + "\r\n"
