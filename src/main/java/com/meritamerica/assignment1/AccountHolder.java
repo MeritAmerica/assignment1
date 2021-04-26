@@ -59,6 +59,12 @@ public class AccountHolder {
 		return checkingAccount;
 	}
 
+	@Override
+	public String toString() {
+		return "AccountHolder [firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName
+				+ ", ssn=" + ssn + ", checkingAccount=" + checkingAccount + ", savingsAccount=" + savingsAccount + "]";
+	}
+
 	public SavingsAccount getSavingsAccount() {
 		return savingsAccount;
 	}
